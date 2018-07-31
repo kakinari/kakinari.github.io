@@ -1,1 +1,14 @@
+title: Kakinari's Home Page
+email: tkakinari@hotmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Welcome to Kakinari's home page.
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://kakinari.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: none
+github_username:  kakinari
+
+# Build settings
+markdown: kramdown
 theme: jekyll-theme-leap-day
+plugins:
+  - jekyll-feed
