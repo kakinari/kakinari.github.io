@@ -1,2 +1,3 @@
 # kakinari.github.io
-This is setup for my homepage site.
+This is github-pages source repository.
+
