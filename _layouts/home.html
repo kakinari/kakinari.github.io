@@ -1,0 +1,20 @@
+---
+layout: default
+title: Project Home Page
+lang: ja
+subtitle: Latest Information
+---
+{{ content }}
+
+<h2>{{ page.subtitle }}</h2>
+
+{% for tag in site.categories %}
+  <h3>{{ tag[0] }}</h3>
+  <ul>
+    {% for post in tag[1] %}
+      {% if  post.tag == page.lang %}
+      <li><a href="{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endfor %}

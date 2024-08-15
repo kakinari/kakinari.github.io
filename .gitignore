@@ -1,5 +1,7 @@
-Gemfile.lock
 _site
-vendor
+Gemfile.lock
+.sass-cache
+.jekyll-cache
 .jekyll-metadata
-start.sh
+vendor
+run.sh
