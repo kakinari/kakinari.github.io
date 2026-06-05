@@ -1,0 +1,4 @@
+{
+  "name": "Nextjsenv",
+  "image": "kakinari/ubi-micro-ja:10-cs-nodejs-26"
+}
