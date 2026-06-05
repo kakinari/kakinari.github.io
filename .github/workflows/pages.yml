@@ -1,25 +1,19 @@
-# This is a basic workflow to help you get started with Actions
-
 name: pages
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   pull_request:
-    branches: [ "master" ]
-
-  # types: [opened, synchronize, reopened]
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches: ["master"]
+    types: [opened, synchronize, reopened]
   workflow_dispatch:
 
-  permissions:
+permissions:
   contents: read
   pages: write
   id-token: write
-  concurrency:
+
+concurrency:
   group: pages-${{ github.ref }}
   cancel-in-progress: true
 
@@ -29,20 +23,35 @@ jobs:
     container:
       image: kakinari/ubi-micro-ja:10-cs-nodejs-26
     steps:
-      - uses: actions/checkout@v4
-      - run: node -v
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm build
-      - uses: actions/upload-pages-artifact@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show Node version
+        run: node -v
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./out
 
   deploy:
+    if: github.event_name == 'push'
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          preview: ${{ github.event_name == 'pull_request' }}
-
