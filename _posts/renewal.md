@@ -2,7 +2,7 @@
 title: "サイトを更新しました。"
 excerpt: "これまで放置していましたがNodeベースでサイトを構築できるようになったことを知り、新サイトをリニューアルしました。"
 coverImage: "/assets/blog/renewal/sakura.jpg"
-date: "2026-06-06T05:35:07.322Z"
+date: "2026-12-31T05:35:07.322Z"
 category: "日記"
 author:
   name: 柿成 恭志
