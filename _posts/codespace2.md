@@ -13,7 +13,7 @@ ogImage:
 
 ## Github Codespaces用のDockerイメージ
 
-### Codespaces用のDockerイメージを用意する
+## Codespaces用のDockerイメージを用意する
 
 CodeSpacesに使用するイメージはMicrosoftが用意している開発コンテナから選択することができます。　Codespacesを使用すると実行されたコンテナ上にリポジトリが展開され、作業環境をターミナル上に提供されます。
 
@@ -24,7 +24,7 @@ Codespacesには連続運用期限があるため、コンテナが停止した�
 
 イメージ自体はDocker上で作成したものではなくRedhat上でpodmanをベースに作成しています。　作成方法などは別の投稿で。
 
-### 用意したイメージ
+## 用意したイメージ
 
 開発環境として以下のイメージを用意しています。
 
@@ -33,19 +33,19 @@ Codespacesには連続運用期限があるため、コンテナが停止した�
 - docker.io/kakinari/ubi-micro-j:10-cs-node-26
 - docker.io/kakinari/ubi-micro-j:10-cs-anaconda-3
 
-#### RedhatEL10 + 開発環境
+### RedhatEL10 + 開発環境
 
 Podmanのubi-initをベースに開発環境をインストールしてあります。
 
-#### ベースイメージ + Java latest
+### ベースイメージ + Java latest
 
 ベースイメージにJava latest developをインストールしています。
 
-#### ベースイメージ + NodeJS 26
+### ベースイメージ + NodeJS 26
 
 ベースイメージの/opt 配下に node 26, npｍ, pnpmをインストールしています。
 
-#### ベースイメージ + anaconda3
+### ベースイメージ + anaconda3
 
 ベースイメージの/opt 配下に Anaconda3、opencv_python、PyToachをインストールしています。
 VS Codeで起動させたときにJupyter Notebookを使用できるよう調整してあります。
