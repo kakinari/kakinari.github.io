@@ -2,7 +2,7 @@
 title: "Github Codespaces images"
 excerpt: "CodeSpacesのために用意したDockerイメージを紹介します。"
 coverImage: "/assets/blog/hello-world/cover.jpg"
-date: "2026-09-06T08:35:07.322Z"
+date: "2026-06-09T08:35:07.322Z"
 category: "Github Tips"
 author:
   name: 柿成 恭志

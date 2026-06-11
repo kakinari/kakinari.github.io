@@ -2,7 +2,7 @@
 title: "Codespaces images build Tios"
 excerpt: "CodeSpacesのためのイメージを作成するためのヒントをまとめてみました。"
 coverImage: "/assets/blog/hello-world/cover.jpg"
-date: "2026-09-06T09:35:07.322Z"
+date: "2026-06-11T09:35:07.322Z"
 category: "Github Tips"
 author:
   name: 柿成 恭志
