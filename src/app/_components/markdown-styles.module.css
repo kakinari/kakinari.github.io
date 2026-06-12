@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-lg leading-8 text-slate-800 dark:text-slate-200;
+  @apply text-lg leading-8 text-slate-600 dark:text-slate-100;
 }
 
 .markdown p,
@@ -39,7 +39,7 @@
 }
 
 .markdown blockquote {
-  @apply border-l-4 border-slate-300 bg-slate-50 px-5 py-3 italic text-slate-700 dark:border-slate-600 dark:bg-slate-800/60 dark:text-slate-200;
+  @apply border-l-4 border-slate-300 bg-slate-50 px-5 py-3 italic text-slate-600 dark:border-slate-600 dark:bg-slate-800/60 dark:text-slate-100;
 }
 
 .markdown hr {

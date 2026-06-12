@@ -1,5 +1,5 @@
 ---
-title: "Github Codespaces images"
+title: "Podman Codespaces images"
 excerpt: "Podmanでイメージを作成するときのTipsを挙げてみます。"
 coverImage: "/assets/blog/hello-world/cover.jpg"
 date: "2026-06-12T08:35:07.322Z"

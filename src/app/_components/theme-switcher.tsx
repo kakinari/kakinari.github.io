@@ -56,7 +56,13 @@ export const NoFOUCScript = (storageKey: string) => {
   /** function to add remove dark class */
   window.updateDOM = () => {
     const restoreTransitions = modifyTransition();
-    const mode = getStoredMode(storageKey) ?? SYSTEM;
+    const storage = globalThis.localStorage as
+      | { getItem?: (k: string) => string | null }
+      | undefined;
+    const mode =
+      storage && typeof storage.getItem === "function"
+        ? (storage.getItem(storageKey) ?? SYSTEM)
+        : SYSTEM;
     const systemMode = media.matches ? DARK : LIGHT;
     const resolvedMode = mode === SYSTEM ? systemMode : mode;
     const classList = document.documentElement.classList;
