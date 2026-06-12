@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-lg leading-relaxed;
+  @apply text-lg leading-8 text-slate-800;
 }
 
 .markdown p,
@@ -9,10 +9,92 @@
   @apply my-6;
 }
 
+.markdown p {
+  @apply tracking-wide;
+}
+
+.markdown ul {
+  @apply list-disc pl-6;
+}
+
+.markdown ol {
+  @apply list-decimal pl-6;
+}
+
+.markdown li {
+  @apply my-1;
+}
+
+.markdown li > ul,
+.markdown li > ol {
+  @apply my-2;
+}
+
+.markdown a {
+  @apply underline decoration-sky-500 decoration-2 underline-offset-4 transition-colors;
+}
+
+.markdown a:hover {
+  @apply text-sky-700;
+}
+
+.markdown blockquote {
+  @apply border-l-4 border-slate-300 bg-slate-50 px-5 py-3 italic text-slate-700;
+}
+
+.markdown hr {
+  @apply my-10 border-slate-200;
+}
+
+.markdown h1 {
+  @apply text-4xl mt-12 mb-6 leading-tight font-bold tracking-tight;
+}
+
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug;
+  @apply text-3xl mt-12 mb-4 leading-snug font-semibold tracking-tight;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug;
+  @apply text-2xl mt-8 mb-4 leading-snug font-semibold;
+}
+
+.markdown h4 {
+  @apply text-xl mt-7 mb-3 leading-snug font-semibold;
+}
+
+.markdown :not(pre) > code {
+  @apply rounded bg-slate-100 px-1.5 py-0.5 text-[0.95em] text-slate-900;
+}
+
+.markdown pre {
+  @apply my-7 overflow-x-auto rounded-lg bg-slate-900 p-4 text-sm leading-6 text-slate-100;
+}
+
+.markdown pre code {
+  @apply bg-transparent p-0 text-inherit;
+}
+
+.markdown img {
+  @apply my-8 h-auto max-w-full rounded-lg border border-slate-200;
+}
+
+.markdown table {
+  @apply my-8 w-full border-collapse overflow-hidden rounded-lg text-base;
+}
+
+.markdown thead {
+  @apply bg-slate-100;
+}
+
+.markdown th,
+.markdown td {
+  @apply border border-slate-200 px-3 py-2 text-left;
+}
+
+.markdown th {
+  @apply font-semibold text-slate-900;
+}
+
+.markdown tbody tr:nth-child(even) {
+  @apply bg-slate-50;
 }
